@@ -1,0 +1,19 @@
+{
+  "name": "effect-monorepo",
+  "private": true,
+  "packageManager": "pnpm@12.14.0",
+  "scripts": {
+    "check:dedupe": "pnpm dedupe --check",
+    "verify": "turbo check:dedupe check:types check:lint test:unit",
+    "build": "turbo run build",
+    "run:local": "turbo run run:local",
+    "test:unit": "turbo run test:unit",
+    "test:integration": "turbo run test:integration"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "tsx": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:"
+  }
+}

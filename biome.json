@@ -1,0 +1,153 @@
+{
+  "$schema": "https://biomejs.dev/schemas/latest/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [[":PACKAGE:", ":NODE:", "!@repo/**"], ":BLANK_LINE:", "@repo/**", ":BLANK_LINE:","#/**"]
+          }
+        }
+      }
+    }
+  },
+  "files": {
+    "includes": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.json",
+      "**/*.jsonc",
+
+      "!!/**/node_modules",
+      "!!/**/dist",
+      "!!**/sdks/**",
+      "!!/**/build",
+      "!!/**/.turbo",
+      "!!/**/.next",
+      "!!/**/coverage",
+      "!!/**/*.min.js",
+      "!!/**/*.d.ts",
+      "!!/**/pnpm-lock.yaml",
+      "!!/**/.git",
+      "!!/**/tsconfig.tsbuildinfo",
+      "!!/**/dist-electron"
+    ],
+    "ignoreUnknown": true
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 250
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "trailingCommas": "all",
+      "semicolons": "always"
+    },
+    "jsxRuntime": "transparent"
+  },
+  "json": {
+    "parser": {
+      "allowComments": true
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["frontend/shared/ui/src/primitives/**", "frontend/backoffice/components/ui/**"],
+      "linter": {
+        "rules": {
+          "a11y": {
+            "useSemanticElements": "off",
+            "noAutofocus": "off",
+            "useValidAriaProps": "off",
+            "useFocusableInteractive": "off",
+            "useAriaPropsSupportedByRole": "off",
+            "useAriaPropsForRole": "off",
+            "useKeyWithClickEvents": "off",
+            "useButtonType": "off"
+          },
+          "suspicious": {
+            "noArrayIndexKey": "off",
+            "noDocumentCookie": "off"
+          },
+          "security": {
+            "noDangerouslySetInnerHtml": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts", "**/*.spec.tsx", "**/__tests__/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noNonNullAssertion": "off"
+          }
+        }
+      }
+    }
+  ],
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noBannedTypes": "error",
+        "noUselessTypeConstraint": "error",
+        "noForEach": "off",
+        "useArrowFunction": {
+          "level": "error",
+          "fix": "safe"
+        }
+      },
+      "correctness": {
+        "noUnusedImports": {
+          "level": "warn",
+          "fix": "safe"
+        },
+        "noUnusedVariables": "error"
+      },
+      "style": {
+        "noNonNullAssertion": "warn",
+        "useConst": "error",
+        "useImportType": "off",
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "strictCase": false,
+            "requireAscii": true,
+            "filenameCases": ["kebab-case", "PascalCase"]
+          }
+        }
+      },
+      "a11y": {
+        "useKeyWithClickEvents": "warn",
+        "useButtonType": "warn"
+      },
+      "suspicious": {
+        "noExplicitAny": "warn",
+        "useIterableCallbackReturn": "off"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "error",
+          "fix": "safe",
+          "options": {
+            "attributes": ["className"],
+            "functions": ["cn"]
+          }
+        }
+      }
+    }
+  }
+}

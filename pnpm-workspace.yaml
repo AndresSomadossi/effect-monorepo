@@ -1,0 +1,21 @@
+packages:
+  - apps/*
+  - contexts/*
+  - shared-packages/*/*
+
+allowBuilds:
+  esbuild: true
+
+# Every external dependency in every workspace manifest (root included) takes its version from this catalog,
+# so all packages resolve the same version. Declare it as `"<name>": "catalog:"`.
+catalogMode: strict
+
+catalog:
+  # Exact: 2.6 moved useSortedClasses out of nursery, which biome.json still configures there.
+  "@biomejs/biome": 2.5.15
+  "@effect/language-service": ^0.87.0
+  "@types/node": ^26.6.5
+  tsx: ^4.23.15
+  turbo: ^2.11.9
+  typescript: ^7.0.2
+  vitest: ^5.0.5

@@ -1,0 +1,69 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit",
+    "source.action.useSortedKeys.biome": "explicit",
+    "source.fixAll.biome": "explicit"
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "js/ts.preferences.quoteStyle": "double",
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
+  "js/ts.preferences.importModuleSpecifierEnding": "minimal",
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "githubPullRequests.pushBranch": "always",
+  "githubPullRequests.createDefaultBaseBranch": "repositoryDefault",
+  "githubIssues.issueCompletionFormatScm": "${issueTitle} ${issueNumberLabel}",
+  "githubIssues.issueBranchTitle": "${issueNumber}-${sanitizedLowercaseIssueTitle}",
+  "githubIssues.useBranchForIssues": "on",
+  "githubIssues.workingIssueFormatScm": "Resolves ${issueNumberLabel} ${issueTitle}",
+  "githubPullRequests.pullPullRequestBranchBeforeCheckout": "pullAndMergeBase",
+  "githubPullRequests.pullBranch": "always",
+  "githubPullRequests.pullRequestDescription": "template",
+  "githubIssues.queries": [
+    {
+      "label": "My Issues",
+      "query": "repo:${owner}/${repository} is:open assignee:${user}",
+      "groupBy": ["milestone"]
+    },
+    {
+      "label": "Sprint Backlog",
+      "query": "repo:${owner}/${repository} state:open milestone:* sort:created-desc",
+      "groupBy": ["milestone"]
+    },
+    {
+      "label": "Pending Tasks",
+      "query": "repo:${owner}/${repository} state:open sort:created-desc"
+    }
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
+}

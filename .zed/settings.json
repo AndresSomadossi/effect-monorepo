@@ -1,0 +1,50 @@
+{
+  "format_on_save": "on",
+
+  "tab_size": 2,
+  "remove_trailing_whitespace_on_save": true,
+  "ensure_final_newline_on_save": true,
+
+  "terminal": {
+    "shell": {
+      "program": "/bin/zsh"
+    }
+  },
+  "code_actions_on_format": {
+    "source.organizeImports.biome": true,
+    "source.fixAll.biome": true
+  },
+
+  "file_scan_exclusions": ["repos", "**/.git", "**/.svn", "**/.hg", "**/.jj", "**/CVS", "**/.DS_Store", "**/Thumbs.db", "**/.classpath", "**/.settings"],
+
+  "languages": {
+    "TypeScript": {
+      "language_servers": ["!eslint", "!typescript-language-server", "..."],
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "CSS": {
+      "language_servers": ["!eslint", "!typescript-language-server", "..."],
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "HTML": {
+      "language_servers": ["!eslint", "!typescript-language-server", "..."],
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "JSON": {
+      "language_servers": ["!eslint", "!typescript-language-server", "..."],
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "JSONC": {
+      "language_servers": ["!eslint", "!typescript-language-server", "..."],
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "JavaScript": {
+      "language_servers": ["!eslint", "!typescript-language-server", "..."],
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "TSX": {
+      "language_servers": ["!eslint", "!typescript-language-server", "..."],
+      "formatter": { "language_server": { "name": "biome" } }
+    }
+  }
+}

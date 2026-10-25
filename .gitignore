@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output and framework caches
+dist/
+dist-*/
+build/
+out/
+.next/
+.turbo/
+dist-electron/
+lambda-package/
+lambda-artifacts/
+
+# Test and coverage artifacts
+coverage/
+test-data/
+test-images/
+playwright-report/
+test-results/
+
+# TypeScript and tool caches
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+.cache/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local platform and service state
+.clerk/
+.pulumi/
+.vercel/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local env files
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Next.js generated types
+next-env.d.ts
+
+# Claude Code session state (package-boundaries approvals)
+.claude/state/
