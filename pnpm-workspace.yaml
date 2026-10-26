@@ -14,7 +14,12 @@ catalog:
   # Exact: 2.6 moved useSortedClasses out of nursery, which biome.json still configures there.
   "@biomejs/biome": 2.5.15
   "@effect/language-service": ^0.87.0
+  "@effect/platform-node": ^4.0.6
+  "@effect/vitest": ^4.0.6
   "@types/node": ^26.6.5
+  drizzle-orm: 0.45.3
+  postgres: ^3.4.9
+  effect: ^4.0.6
   tsx: ^4.23.15
   turbo: ^2.11.9
   typescript: ^7.0.2

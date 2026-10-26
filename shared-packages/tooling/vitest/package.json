@@ -1,0 +1,29 @@
+{
+  "name": "@repo/tooling-vitest",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#*": [
+      "./src/*.ts",
+      "./src/*/index.ts"
+    ]
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./package-boundaries": "./src/package-boundaries/index.ts",
+    "./workspace": "./src/workspace/index.ts"
+  },
+  "scripts": {
+    "check:lint": "biome check --write --unsafe --max-diagnostics=none .",
+    "check:types": "tsc --noEmit",
+    "test:unit": "vitest run --project unit"
+  },
+  "dependencies": {
+    "vitest": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  }
+}

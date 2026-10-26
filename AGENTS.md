@@ -9,4 +9,4 @@ This project vendors external repositories under @repos/
 
 ## Effect
 
-When writing Effect code, inspect @repos/effect/ for examples of idiomatic usage, tests, module structure, and API design. Treat it as the source of truth for Effect patterns.
+When writing Effect code, read @repos/effect/LLMS.md and inspect @repos/effect/ for examples of idiomatic usage, tests, module structure, and API design. Treat it as the source of truth for Effect patterns.

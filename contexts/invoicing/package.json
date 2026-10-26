@@ -1,0 +1,29 @@
+{
+  "name": "@repo/invoicing",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#*": "./src/*.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "check:lint": "biome check --write --unsafe --max-diagnostics=none .",
+    "check:types": "tsc --noEmit",
+    "test:unit": "vitest run --project unit"
+  },
+  "dependencies": {
+    "@repo/customers": "workspace:^",
+    "effect": "catalog:"
+  },
+  "devDependencies": {
+    "@effect/vitest": "catalog:",
+    "@repo/tooling-typescript": "workspace:^",
+    "@repo/tooling-vitest": "workspace:^",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}
